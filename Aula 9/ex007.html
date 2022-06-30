@@ -8,7 +8,7 @@
     <style>
         body{
             background-color: rgb(85, 85, 170);
-            color:rgb(0, 0, 0);
+            color:rgb(255, 255, 255);
             font-family: sans-serif;
         }
     </style>
@@ -18,19 +18,23 @@
     <h1>Iniciado os estudos DOM</h1>
     <p>Aqui vai o resultado</p>
     <p>Apredendo <strong>Dom</strong> Em Javascript</p>
-    <div>Clique em mim</div>
+    <div class="msg">Clique em mim</div>
 
 
 
 
     <script>
-    window.document.write('Olá mundo')
+        var corpo = window.document.body
+        var p1 = document.getElementsByName ('p') [1]
+        /*
+        var d = document.getElementById('msg')
+        d.style.background = 'green'
+        d.innerHTML = 'Estou aguardando'
+        */
 
 
-
-
-
-
+        var d = document.querySelector('div.msg')
+        d.style.background = 'black'
 
 
 
@@ -69,7 +73,7 @@
  // document
   // html
    // head
-    // body ''
+    // body
     </script>
 </body>
 </html>

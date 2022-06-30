@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAN</title>
+
+
+    <style>
+        body {
+            background-color: rgb(37, 37, 37);
+            color: white;
+            font-family: sans-serif;
+        }
+        #txtvel{
+            background-color: #03a871;
+            color: azure;
+            border: none;
+            border-radius: 1em;
+        }
+
+        #btn{
+            background-color: #4a8672;
+            color: azure;
+            border-radius: 1em;
+            border-color: black;
+        }
+    </style>
+</head>
+<body id="colors">
+
+    <h1>Sistema de Multas</h1>
+    Velocidade do carro: <input type="number" name="txtvel" id="txtvel"> km/h
+    <input id="btn" type="button" value="Verificar" onclick="calcular()"> <br><br>
+    <div id="res"></div>
+
+    <script>
+        function calcular() {
+          var txtv = document.querySelector('input#txtvel')
+          var res = document.querySelector('div#res')
+          var color = document.querySelector('body#colors')
+          var vel = Number(txtv.value)
+          res.innerHTML = `Sua velocidade atual é de ${vel} Km/h <br> <br>`
+          if (vel > 60) {
+            res.innerHTML += '<strong> Você foi multado por exesso de velocidade ! </strong>'
+            color.style.background = 'red'
+            } else {
+                res.innerHTML += 'Você está andando na velocidade correta <strong>Parabéns</strong> !'
+                color.style.background = 'green'
+            }
+
+            if (vel == 60) {
+                res.innerHTML += '<strong>Você está andando no limite de velocidade reduza ou será MULTADO</strong>' 
+                color.style.background = 'yellow'
+
+            }
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background: yellow;
+        }
+        div#area {
+            font-family: sans-serif;
+            background: #1caf35;
+            color: white;
+            width: 200px;
+            height: 200px;
+            border: none;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body id="bgg">
+
+    <div id="area">
+        interaja...
+    </div>
+
+
+
+    <script>
+        var bg = document.getElementById('bgg')
+        var a = document.getElementById('area')
+        a.addEventListener("click", clicar)
+        a.addEventListener("mouseenter", entrar)
+        a.addEventListener("mouseout", sair)
+
+        function entrar() {
+          a.innerText = 'Entrou !'
+          a.style.border = 'none'
+          a.style.background = '#1caf35'
+          a.style.width = '200px'
+        }
+
+        function clicar() {
+         a.innerText = 'Clicou !'
+         bg.style.background = 'blue'
+         a.style.color = 'red'
+         a.style.background = 'grey'
+         a.style.borderRadius = '10px'
+        }
+
+        function sair() {
+           a.innerText = 'Saiu !'
+           bg.style.background = 'yellow'
+           a.style.color = 'white'
+           a.style.background = '#1caf35'
+           a.style.borderRadius = '40px'
+           a.style.width = '100%'
+        }
+
+    </script>
+    
+</body>
+</html>

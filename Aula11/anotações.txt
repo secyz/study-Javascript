@@ -1,0 +1,29 @@
+var pt1 = "Condição"
+
+if (condição) {
+
+    true (comando para se a condição for verdadeira)
+
+} else (se não
+
+   false(um comando para o else) {
+
+ }
+
+
+
+
+ var pt2 = "Tipos de condição"
+
+
+ if (condição) {
+    true                              <--- condição simples
+ }
+
+
+
+ if (condição) {
+    true
+ } else {
+    false
+ }

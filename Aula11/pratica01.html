@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Governo Federal</title>
+    <style>
+        body{
+            background-color: #3cac3c;
+            color: white;
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistema de nacionalidade</h1>
+    Qual o seu país ? <input type="text" id="pais">
+    <input type="button" value="Pesquisar" onclick="clicar()">
+    <div id="res">
+
+    </div>
+
+    <script>
+        function clicar() {
+            var paisp = document.getElementById('pais')
+        var res = document.querySelector('res')
+
+        var vel = String(paisp.value)
+        res.innerText = `Seu é ${vel}`
+        if (vel == 'Brasil') {
+            res.innerHTML += 'Vc é Brasileiro'
+        } else {
+            res.innerHTML = 'Você é Estrangeiro'
+        }
+    }
+    </script>
+</body>
+</html>
