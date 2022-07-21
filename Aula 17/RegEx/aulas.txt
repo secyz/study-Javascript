@@ -2,12 +2,12 @@ Functions {
 
     OK: Functions;
     OK: ArrowFunctions;
-    OK: ArrowFunctions;
+    OK: Arrays;
 
 }
 
 Objetos [
-
+    OK: Objects;
 ]
 
 Modularização (
